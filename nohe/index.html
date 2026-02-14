@@ -1,0 +1,231 @@
+<head>
+    <title>Feliz Dia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(180deg, #fff, #ffe6ee);
+            color: #5a3a3a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 40px;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        h1, h2, p {
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 1s ease;
+        }
+
+
+        .slide.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 15px 0;
+            color: #c94c7a;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 8px 0;
+            color: #d96b92;
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin: 12px 0;
+            color: #6b4a4a;
+        }
+
+        .jiji {
+            color: #e25584;
+            font-weight: 600;
+        }
+
+        .photo-container {
+            position: relative;
+            width: 260px;
+            height: 360px;
+            margin: 30px auto;
+        }
+
+        .photo {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .photo.active {
+            opacity: 1;
+        }
+
+        .line {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .line.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        button {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+
+            background: linear-gradient(135deg, #ff9bbd, #ffb6d5);
+            border: none;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(255, 155, 189, 0.5);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            z-index: 999;
+        }
+
+
+        button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 15px 35px rgba(255, 155, 189, 0.7);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .messages {
+            margin: 4px 0;
+        }
+
+        .slides-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            min-height: 650px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="messages"><em>Nohendry</em></h1>
+    <h1 class="messages"><em>Feliz día</em></h1>
+
+    <div class="slides-wrapper">
+        <div class="slide message active">
+            <h1>Eres la mejor...</h1>
+            <p>... y una de las personas más importantes de mi vida</p>
+            <p>En un mundo en el que todo últimamente se ha vuelto pasajero y volatil, tú siempre has estado ahí</p>
+            <p>Me pareces una mujer excelente, llena de metas y de capacidad para lograrlas, no tengo duda...</p>
+            <p>Admiro como la vida ha intentado colocarte obstáculos pero siempre sigues adelante, con una actitud y sonrisa que siempre me ha encantado</p>
+            <strong>Tú puedes contra viento y marea</strong>
+        </div>
+        <div class="slide memories">
+            <h1>Quiero verte...<h1>
+            <p>Quiero volver a hablarte de frente, crear momentos, compartir risas<span class="jiji"> y compartir aparatos reproductores 🤫</span></p>
+            <p>Estoy seguro que la persona que dejé hace años ha evolucionado mucho</p>
+            <p>Sin embargo, con sólo pensar que voy a verte una vez más me llena de emoción</p>
+            <div class="photo-container">
+                <img src="img/p1.jpg" class="photo active">
+                <img src="img/p2.jpg" class="photo">
+                <img src="img/p3.jpg" class="photo">
+                <img src="img/p4.jpg" class="photo">
+            </div>
+        </div>
+        <div class="slide tu">
+            <h1 class="line">Y tú...</h1>
+            <h1 class="line">Simplemente tú...</h1>
+            <h1 class="line">Mírate... Eres hermosa 😍</h1>
+            <h2 class="line">Me encanta tu sonrisa</h2>
+            <h2 class="line">Me encanta tu cabello</h2>
+            <h2 class="line">Me encantan tus ojos</h2>
+            <h2 class="line">Me encantas completa</h2>
+            <div class="photo-container">
+                <img src="img/p5.jpg" class="photo active">
+                <img src="img/p6.jpg" class="photo">
+                <img src="img/p7.jpg" class="photo">
+            </div>
+        </div>
+        <div class="slide dia">
+            <h1>Feliz día del amor mi mor ❤️</h1>
+        </div>
+    </div>
+    <button type="button" onclick="next()">❤️</button>
+    <script>
+        function animateLines(slide) {
+            const lines = slide.querySelectorAll(".line");
+            lines.forEach((line, index) => {
+            line.classList.remove("show");
+            setTimeout(() => {
+                line.classList.add("show");
+            }, index * 2000);
+            });
+        }
+
+        const slides = document.querySelectorAll(".slide");
+        let currentSlide = 0;
+
+        slides[currentSlide].classList.add("active");
+        animateLines(slides[currentSlide]);
+
+        function next() {
+            slides[currentSlide].classList.remove("active");
+
+            currentSlide = (currentSlide + 1) % slides.length;
+
+            slides[currentSlide].classList.add("active");
+            animateLines(slides[currentSlide]);
+        }
+
+        document.querySelectorAll(".photo-container").forEach(container => {
+            const photos = container.querySelectorAll(".photo");
+            let index = 0;
+
+            setInterval(() => {
+            photos[index].classList.remove("active");
+            index = (index + 1) % photos.length;
+            photos[index].classList.add("active");
+            }, 3000);
+        });
+
+    </script>
+</body>
